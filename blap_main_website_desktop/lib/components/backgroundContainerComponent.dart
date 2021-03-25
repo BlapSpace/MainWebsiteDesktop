@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-class BackgroundContainer extends StatefulWidget {
+class BackgroundContainerComponent extends StatefulWidget {
   Color _color;
   BoxShadow _boxShadow;
-  BackgroundContainer(this._color, this._boxShadow);
+  BackgroundContainerComponent(this._color, this._boxShadow);
   @override
-  _BackgroundContainerState createState() =>
-      _BackgroundContainerState(_color, _boxShadow);
+  _BackgroundContainerComponentState createState() =>
+      _BackgroundContainerComponentState(_color, _boxShadow);
 }
 
-class _BackgroundContainerState extends State<BackgroundContainer> {
+class _BackgroundContainerComponentState
+    extends State<BackgroundContainerComponent> {
   Color _color;
   BoxShadow _boxShadow;
-  _BackgroundContainerState(this._color, this._boxShadow);
+  _BackgroundContainerComponentState(this._color, this._boxShadow);
   @override
   Widget build(BuildContext context) {
     return Container(

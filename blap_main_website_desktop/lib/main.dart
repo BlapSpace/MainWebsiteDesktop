@@ -1,5 +1,5 @@
-import 'friends/friendsBuilder.dart';
 import 'package:flutter/material.dart';
+import 'friends/friendsBuilder.dart';
 
 void main() {
   runApp(Blap());
@@ -19,11 +19,8 @@ class _BlapState extends State<Blap> {
         body: Container(
           color: Color(0xFFFFFFFF),
           child: Align(
-            alignment: Alignment.centerRight,
-            child: Container(
-              width: 300,
-              child: FriendsBuilder(),
-            ),
+            alignment: Alignment.bottomRight,
+            child: FriendsBuilder(),
           ),
         ),
       ),
