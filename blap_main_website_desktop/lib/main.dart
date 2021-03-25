@@ -17,8 +17,14 @@ class _BlapState extends State<Blap> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
-          color: Color(0xFFFFFF),
-          child: FriendsBuilder(),
+          color: Color(0xFFFFFFFF),
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: Container(
+              width: 300,
+              child: FriendsBuilder(),
+            ),
+          ),
         ),
       ),
     );

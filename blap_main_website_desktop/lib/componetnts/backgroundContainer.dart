@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class FriendsBuilder extends StatefulWidget {
+class BackgroundContainer extends StatefulWidget {
   @override
-  _FriendsBuilderState createState() => _FriendsBuilderState();
+  _BackgroundContainerState createState() => _BackgroundContainerState();
 }
 
-class _FriendsBuilderState extends State<FriendsBuilder> {
+class _BackgroundContainerState extends State<BackgroundContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
