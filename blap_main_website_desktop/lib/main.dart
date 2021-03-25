@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'friends/friendsBuilder.dart';
+import 'header/headerBuilder.dart';
+import 'talks/talksBuilder.dart';
 
 void main() {
   runApp(Blap());
@@ -18,9 +20,18 @@ class _BlapState extends State<Blap> {
       home: Scaffold(
         body: Container(
           color: Color(0xFFFFFFFF),
-          child: Align(
-            alignment: Alignment.bottomRight,
-            child: FriendsBuilder(),
+          child: Stack(
+            children: <Widget>[
+              HeaderBuilder(),
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: TalksBuilder(),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: FriendsBuilder(),
+              ),
+            ],
           ),
         ),
       ),

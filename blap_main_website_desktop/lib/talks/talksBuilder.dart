@@ -1,7 +1,10 @@
+import 'package:blap_main_website_desktop/components/profileIconComponent.dart';
+import 'package:blap_main_website_desktop/components/talks/talksComponent.dart';
 import 'package:flutter/material.dart';
 
 import '../components/backgroundContainerComponent.dart';
 import '../components/normalFontComponent.dart';
+import '../demoData/demoData.dart';
 import 'talk.dart';
 
 class TalksBuilder extends StatefulWidget {
@@ -13,8 +16,8 @@ class _TalksBuilderState extends State<TalksBuilder> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 900,
-      width: 300,
+      height: 875,
+      width: 350,
       child: BackgroundContainerComponent(
         Color(0x38A0D2BA),
         BoxShadow(
@@ -28,20 +31,18 @@ class _TalksBuilderState extends State<TalksBuilder> {
           children: <Widget>[
             SizedBox(height: 45),
             Padding(
-              padding: EdgeInsets.only(left: 55),
+              padding: EdgeInsets.only(left: 45),
               child: NormalFontComponent('GESPRÄCHE', Color(0xFF181818), 25),
             ),
             SizedBox(height: 45),
             Padding(
-              padding: EdgeInsets.only(left: 10.0),
+              padding: EdgeInsets.only(left: 35.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  TalkWidget(),
-                  SizedBox(height: 10),
-                  TalkWidget(),
+                children: <Widget>[
+                  TalksComponent(),
                 ],
-              )
+              ),
             )
           ],
         ),

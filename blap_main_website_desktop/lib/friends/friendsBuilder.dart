@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:blap_main_website_desktop/components/backgroundContainerComponent.dart';
 import 'package:blap_main_website_desktop/components/normalFontComponent.dart';
-import 'package:flutter/material.dart';
 
 class FriendsBuilder extends StatefulWidget {
   @override
@@ -11,8 +11,8 @@ class _FriendsBuilderState extends State<FriendsBuilder> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 900,
-      width: 300,
+      height: 875,
+      width: 350,
       child: BackgroundContainerComponent(
         Color(0xFFFFFFFF),
         BoxShadow(
@@ -26,14 +26,14 @@ class _FriendsBuilderState extends State<FriendsBuilder> {
           children: <Widget>[
             SizedBox(height: 45),
             Padding(
-              padding: EdgeInsets.only(left: 55),
+              padding: EdgeInsets.only(left: 45),
               child: NormalFontComponent('FREUNDE', Color(0xFF181818), 25),
             ),
             SizedBox(height: 45),
             Padding(
               padding: EdgeInsets.only(left: 55),
               child: NormalFontComponent(
-                  'Hier kommen dan die ganzen Freunde hin.',
+                  'Hier kommen dann die ganzen Freunde hin.',
                   Color(0xFF181818),
                   15),
             ),
