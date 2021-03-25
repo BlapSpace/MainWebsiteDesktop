@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class BackgroundContainerComponent extends StatefulWidget {
-  Color _color;
-  BoxShadow _boxShadow;
-  BackgroundContainerComponent(this._color, this._boxShadow);
+  final Color _color;
+  final BoxShadow _boxShadow;
+  final Widget _child;
+  const BackgroundContainerComponent(this._color, this._boxShadow, this._child);
   @override
   _BackgroundContainerComponentState createState() =>
-      _BackgroundContainerComponentState(_color, _boxShadow);
+      _BackgroundContainerComponentState(_color, _boxShadow, _child);
 }
 
 class _BackgroundContainerComponentState
     extends State<BackgroundContainerComponent> {
-  Color _color;
-  BoxShadow _boxShadow;
-  _BackgroundContainerComponentState(this._color, this._boxShadow);
+  final Color _color;
+  final BoxShadow _boxShadow;
+  final Widget _child;
+  _BackgroundContainerComponentState(this._color, this._boxShadow, this._child);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,6 +27,7 @@ class _BackgroundContainerComponentState
         ),
         boxShadow: [_boxShadow],
       ),
+      child: _child,
     );
   }
 }
