@@ -1,3 +1,4 @@
+import 'friends/friendsBuilder.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,14 @@ class Blap extends StatefulWidget {
 class _BlapState extends State<Blap> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Container(
+          color: Color(0xFFFFFF),
+          child: FriendsBuilder(),
+        ),
+      ),
+    );
   }
 }
