@@ -31,6 +31,8 @@ class _HeaderBuilderState extends State<HeaderBuilder> {
                   ),
                 ),
                 child: TextField(
+                  style: GoogleFonts.lexendDeca(
+                      color: Color(0xFF181818), fontSize: 30),
                   cursorColor: Colors.black,
                   textAlign: TextAlign.start,
                   decoration: InputDecoration(
