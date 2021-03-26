@@ -1,36 +1,31 @@
-import 'package:blap_main_website_desktop/components/normalFontComponent.dart';
 import 'package:blap_main_website_desktop/demoData/demoData.dart';
 import 'package:flutter/material.dart';
 
-import '../profileIconComponent.dart';
+import 'normalFontComponent.dart';
+import 'profileIconComponent.dart';
 
-class TalksComponent extends StatefulWidget {
+class FriendBannerComponent extends StatefulWidget {
   @override
-  _TalksComponentState createState() => _TalksComponentState();
+  _FriendBannerComponentState createState() => _FriendBannerComponentState();
 }
 
-class _TalksComponentState extends State<TalksComponent> {
+class _FriendBannerComponentState extends State<FriendBannerComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 280,
-      height: 200,
+      height: 85,
       decoration: BoxDecoration(
         color: Color(0xFFFFFFFF),
         borderRadius: BorderRadius.all(Radius.circular(40.0)),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0x46648A77),
-            blurRadius: 20,
-            spreadRadius: 0,
-            offset: Offset(4, 4),
-          ),
-        ],
+        border: Border.all(
+          color: Color(0xFFA8CDBB),
+        ),
       ),
       child: Align(
         alignment: Alignment.topLeft,
         child: Padding(
-          padding: EdgeInsets.only(top: 20, left: 25, right: 25),
+          padding: EdgeInsets.only(top: 15, left: 25, right: 25),
           child: Column(
             children: <Widget>[
               Row(
@@ -39,7 +34,7 @@ class _TalksComponentState extends State<TalksComponent> {
                     true,
                     45,
                     45,
-                    DemoData().faces[0],
+                    DemoData().faces[3],
                   ),
                   SizedBox(width: 15),
                   Expanded(
@@ -55,11 +50,6 @@ class _TalksComponentState extends State<TalksComponent> {
                     ),
                   ),
                 ],
-              ),
-              SizedBox(height: 15),
-              Expanded(
-                child: NormalFontComponent(
-                    DemoData().talkText, Color(0xFF181818), 12),
               ),
             ],
           ),

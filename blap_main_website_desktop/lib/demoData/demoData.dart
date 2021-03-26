@@ -1,5 +1,5 @@
 class DemoData {
-  List<String> talks = [
+  List<String> faces = [
     'https://ozgrozer.github.io/100k-faces/0/5/005112.jpg',
     "https://ozgrozer.github.io/100k-faces/0/0/000012.jpg",
     "https://ozgrozer.github.io/100k-faces/0/2/002449.jpg",

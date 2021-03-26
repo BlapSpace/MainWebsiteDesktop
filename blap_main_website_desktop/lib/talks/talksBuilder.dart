@@ -41,6 +41,10 @@ class _TalksBuilderState extends State<TalksBuilder> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   TalksComponent(),
+                  SizedBox(height: 15),
+                  TalksComponent(),
+                  SizedBox(height: 15),
+                  TalksComponent(),
                 ],
               ),
             )

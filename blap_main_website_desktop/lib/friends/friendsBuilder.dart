@@ -1,3 +1,4 @@
+import 'package:blap_main_website_desktop/components/friendBannerComponent.dart';
 import 'package:flutter/material.dart';
 import 'package:blap_main_website_desktop/components/backgroundContainerComponent.dart';
 import 'package:blap_main_website_desktop/components/normalFontComponent.dart';
@@ -31,12 +32,20 @@ class _FriendsBuilderState extends State<FriendsBuilder> {
             ),
             SizedBox(height: 45),
             Padding(
-              padding: EdgeInsets.only(left: 55),
-              child: NormalFontComponent(
-                  'Hier kommen dann die ganzen Freunde hin.',
-                  Color(0xFF181818),
-                  15),
-            ),
+              padding: EdgeInsets.only(left: 35.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  FriendBannerComponent(),
+                  SizedBox(height: 15),
+                  FriendBannerComponent(),
+                  SizedBox(height: 15),
+                  FriendBannerComponent(),
+                  SizedBox(height: 15),
+                  FriendBannerComponent(),
+                ],
+              ),
+            )
           ],
         ),
       ),
