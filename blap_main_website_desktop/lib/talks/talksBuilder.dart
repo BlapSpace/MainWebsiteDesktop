@@ -37,14 +37,14 @@ class _TalksBuilderState extends State<TalksBuilder> {
               SizedBox(height: 45 * _heightFactor),
               Padding(
                 padding: EdgeInsets.only(left: 35 * _widthFactor),
-                child:Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     TalksComponent(),
                     SizedBox(height: 15),
                     TalksComponent(),
-                    //SizedBox(height: 15),
-                    //TalksComponent(),
+                    SizedBox(height: 15),
+                    TalksComponent(),
                   ],
                 ),
               ),
