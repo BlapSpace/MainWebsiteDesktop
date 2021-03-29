@@ -1,11 +1,8 @@
-import 'package:blap_main_website_desktop/components/profileIconComponent.dart';
-import 'package:blap_main_website_desktop/components/talks/talksComponent.dart';
 import 'package:flutter/material.dart';
 
 import '../components/backgroundContainerComponent.dart';
 import '../components/normalFontComponent.dart';
-import '../demoData/demoData.dart';
-import 'talk.dart';
+import '../components/talks/talksComponent.dart';
 
 class TalksBuilder extends StatefulWidget {
   @override
@@ -15,42 +12,46 @@ class TalksBuilder extends StatefulWidget {
 class _TalksBuilderState extends State<TalksBuilder> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 875,
-      width: 350,
-      child: BackgroundContainerComponent(
-        Color(0x38A0D2BA),
-        BoxShadow(
-          color: Color(0xFFF1F8F5),
-          blurRadius: 60,
-          spreadRadius: 0,
-          offset: Offset(-25, 4),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            SizedBox(height: 45),
-            Padding(
-              padding: EdgeInsets.only(left: 45),
-              child: NormalFontComponent('GESPRÄCHE', Color(0xFF181818), 25),
-            ),
-            SizedBox(height: 45),
-            Padding(
-              padding: EdgeInsets.only(left: 35.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  TalksComponent(),
-                  SizedBox(height: 15),
-                  TalksComponent(),
-                  SizedBox(height: 15),
-                  TalksComponent(),
-                ],
+    return LayoutBuilder(builder: (BuildContext builderContext, BoxConstraints boxConstraints) {
+      double _heightFactor = boxConstraints.maxHeight / 1024;
+      double _widthFactor = boxConstraints.maxWidth / 1440;
+      return Container(
+        height: 875 * _heightFactor,
+        width: 350 * _widthFactor,
+        child: BackgroundContainerComponent(
+          Color(0x38A0D2BA),
+          BoxShadow(
+            color: Color(0xFFF1F8F5),
+            blurRadius: 60,
+            spreadRadius: 0,
+            offset: Offset(-25, 4),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(height: 45 * _heightFactor),
+              Padding(
+                padding: EdgeInsets.only(left: 45 * _widthFactor),
+                child: NormalFontComponent('GESPRÄCHE', Color(0xFF181818), 25 * _widthFactor),
               ),
-            )
-          ],
+              SizedBox(height: 45 * _heightFactor),
+              Padding(
+                padding: EdgeInsets.only(left: 35 * _widthFactor),
+                child:Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    TalksComponent(),
+                    SizedBox(height: 15),
+                    TalksComponent(),
+                    //SizedBox(height: 15),
+                    //TalksComponent(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
